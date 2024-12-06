@@ -1,0 +1,31 @@
+{
+  "name": "2",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "tsx ./src/consumer/index.ts & vite & tsx ./src/producer/index.ts"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "chance": "^1.1.12",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "node-cache": "^5.1.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "uuid": "^11.0.3"
+  },
+  "devDependencies": {
+    "@types/chance": "^1.1.6",
+    "@types/express": "^5.0.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.1"
+  }
+}
