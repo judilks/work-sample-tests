@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "tsx ./src/consumer/index.ts & vite & tsx ./src/producer/index.ts"
+    "start": "tsx src/api/index.ts & vite & tsx ./src/producer/index.ts"
   },
   "dependencies": {
     "axios": "^1.7.9",

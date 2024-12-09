@@ -1,28 +1,10 @@
+import {Coordinate, FieldStatus} from "./field.ts";
+import {PrecipitationChance, TemperatureLabel, WeatherCondition, WindDirection} from "./weather.ts";
+
 export type Message = {
   body: string;
   id: string;
   timestamp: string;
-}
-
-export type Coordinate = {
-  lat: number;
-  long: number;
-}
-
-export enum FieldStatus {
-  PLANTING = 'PLANTING',
-  HARVESTING = 'HARVESTING',
-  IRRIGATING = 'IRRIGATING',
-  SPRAYING = 'SPRAYING',
-  IDLE = 'IDLE'
-}
-
-export type Field = {
-  id: number;
-  name: string;
-  coordinates: Coordinate[];
-  machines: number[]
-  status: FieldStatus;
 }
 
 export enum MessageType {
@@ -30,6 +12,7 @@ export enum MessageType {
   FIELD_COORDINATES = 'FIELD_COORDINATES',
   MACHINE_ENTERED = 'MACHINE_ENTERED',
   MACHINE_EXITED = 'MACHINE_EXITED',
+  WEATHER = 'WEATHER'
 }
 
 export interface MessageBody {
@@ -47,5 +30,19 @@ export interface FieldCoordinatesMessage extends MessageBody {
 
 export interface MachineUpdateMessage extends MessageBody {
   machineId: number
+}
+
+export interface WeatherMessage extends MessageBody {
+  temperature: {
+    value: number;
+    label: TemperatureLabel;
+  },
+  condition: WeatherCondition
+  wind: {
+    value: number,
+    direction: WindDirection
+    label: 'MPH'
+  }
+  precipitationChance: PrecipitationChance
 }
 

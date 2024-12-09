@@ -1,5 +1,5 @@
 import {useReducer, useEffect, useState, Reducer, PropsWithChildren} from "react";
-import {Field} from "../../types/messages.ts";
+import {Field} from "../../types/field.ts";
 import {io} from "socket.io-client";
 import {Table} from "./table/table.tsx";
 
@@ -85,26 +85,22 @@ function App() {
         {
           name: 'id',
           accessor: (data) => data.id,
-          header: () => <span>{'ID'}</span>,
-          cell: ({children}) => <div>{children}</div>
+          header: 'ID'
         },
         {
           name: 'name',
           accessor: (data) => data.name,
-          header: () => <span>{'Name'}</span>,
-          cell: ({children}) => <div>{children}</div>
+          header: 'Name'
         },
         {
           name: 'status',
           accessor: (data) => data.status,
-          header: () => <span>{'Status'}</span>,
-          cell: ({children}) => <div>{children}</div>
+          header: 'Status'
         },
         {
           name: 'machines',
           accessor: (data) => data.machines.length,
-          header: () => <span>{'Machines'}</span>,
-          cell: ({children}) => <div>{children}</div>
+          header: 'Machines'
         }
       ]}
     />

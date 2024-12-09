@@ -1,0 +1,27 @@
+.table {
+    margin: 40px auto;
+    max-width: 100%;
+    min-width: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    display: table;
+}
+
+.row {
+    display: table-row;
+    background: #f6f6f6;
+
+    &:nth-of-type(odd) {
+        background: #e9e9e9;
+    }
+
+    &.header {
+        font-weight: 900;
+        color: #ffffff;
+        background: #367C2B
+    }
+}
+
+.cell {
+    padding: 6px 12px;
+    display: table-cell
+}
