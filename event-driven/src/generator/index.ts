@@ -18,7 +18,7 @@ export function generateFields() {
       name: chance.word(),
       coordinates: generateCoordinates(),
       status: generateFieldStatus(),
-      machines: chance.n(() => chance.natural({min: 1, max: 10000}), chance.d6())
+      machines: chance.n(() => chance.integer({min: 1, max: 10000}), chance.d6())
     })
   }
 }
@@ -55,7 +55,7 @@ function generateMachineUpdateMessage(type: Exclude<MessageType, FieldCoordinate
   return {
     type,
     fieldId: chance.d20(),
-    machineId: chance.natural({min: 1, max: 10000})
+    machineId: chance.integer({min: 1, max: 10000})
   }
 }
 
@@ -67,8 +67,8 @@ function generateWeatherMessage(): WeatherMessage {
     fieldId: chance.d20(),
     temperature: {
       value: TemperatureLabel.F ?
-        chance.natural({min: -30, max: 130}) :
-        chance.natural({min: -34, max: 54}),
+        chance.integer({min: -30, max: 130}) :
+        chance.integer({min: -34, max: 54}),
       label: tempLabel
     },
     wind: {

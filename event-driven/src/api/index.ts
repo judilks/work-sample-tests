@@ -21,7 +21,6 @@ app.use(cors({
 }))
 
 io.on('connection', (socket) => {
-    console.log("New connection connected");
     socket.on('messages', (messages) => handler(messages, io))
 })
 
@@ -31,5 +30,5 @@ app.get('/fields', (req, res) => {
 
 server.listen(port, () => {
     generateFields();
-    console.log(`Consumer listening on port ${port}`)
+    console.log(`Api listening on port ${port}`)
 })
