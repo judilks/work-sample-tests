@@ -1,5 +1,5 @@
-import {FieldStatusMessage} from "../../../types/messages.ts";
-import {get, update} from "../service/db.ts";
+import {FieldStatusMessage} from "../../../types/messages";
+import {get, update} from "../service/field";
 
 export function handler(message: FieldStatusMessage) {
   update(message.fieldId, {status: message.status});

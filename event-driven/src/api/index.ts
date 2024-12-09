@@ -3,7 +3,7 @@ import handler from "./handler";
 import {generateFields} from "../generator"
 import {createServer} from 'node:http';
 import {Server} from 'socket.io';
-import {getAll} from "./service/db.ts";
+import {getAll} from "./service/field";
 import cors from 'cors'
 
 const app = express()

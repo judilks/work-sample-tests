@@ -1,5 +1,5 @@
-import {MachineUpdateMessage} from "../../../types/messages.ts";
-import {get, update} from "../service/db.ts";
+import {MachineUpdateMessage} from "../../../types/messages";
+import {get, update} from "../service/field";
 
 export function handler(message: MachineUpdateMessage) {
   update(message.fieldId, {machines: [message.machineId]});

@@ -1,14 +1,13 @@
 import NodeCache from "node-cache";
-import {Field} from "../../../types/messages.ts";
 
 const db = new NodeCache();
 
-export function get(id: number | string): Field | undefined {
-  return db.get<Field>(id);
+export function get<T>(id: number | string): T | undefined {
+  return db.get<T>(id);
 }
 
-export function set(id: number, field: Field) {
-  db.set(id, field);
+export function set<T>(id: number | string, field: T) {
+  db.set<T>(id, field);
 }
 
 export function keys(): string[] {

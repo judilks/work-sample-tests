@@ -1,13 +1,13 @@
-import {set} from "../api/repository/db.ts";
+import {set} from "../api/repository/db";
 import {
   FieldCoordinatesMessage,
   FieldStatusMessage, MachineUpdateMessage, Message,
   MessageType, WeatherMessage
-} from "../../types/messages.ts";
+} from "../../types/messages";
 import * as uuid from "uuid";
 import Chance from 'chance';
-import {Coordinate, FieldStatus} from "../../types/field.ts";
-import {TemperatureLabel, WeatherCondition, WindDirection} from "../../types/weather.ts";
+import {Coordinate, FieldStatus} from "../../types/field";
+import {TemperatureLabel, WeatherCondition, WindDirection} from "../../types/weather";
 
 const chance = new Chance();
 

@@ -1,7 +1,7 @@
 import {useReducer, useEffect, useState, Reducer, PropsWithChildren} from "react";
-import {Field} from "../../types/field.ts";
+import {Field} from "../../types/field";
 import {io} from "socket.io-client";
-import {Table} from "./table/table.tsx";
+import {Table} from "./table/table";
 
 enum FieldActionType {
   SET_FIELDS = "SET_FIELDS",

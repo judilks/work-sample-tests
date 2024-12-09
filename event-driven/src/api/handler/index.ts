@@ -5,11 +5,11 @@ import {
     Message,
     MessageBody,
     MessageType
-} from "../../../types/messages.ts";
-import * as fieldCoordinates from './field-coordinates.ts'
-import * as fieldStatus from './field-status.ts'
-import * as machineEntered from './machine-entered.ts'
-import * as machineExited from './machine-exited.ts'
+} from "../../../types/messages";
+import * as fieldCoordinates from './field-coordinates'
+import * as fieldStatus from './field-status'
+import * as machineEntered from './machine-entered'
+import * as machineExited from './machine-exited'
 import {Server} from "socket.io";
 
 export default function handler(messages: Message[], io: Server) {
